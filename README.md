@@ -1,3 +1,7 @@
+# ProjetoPOOMercado
+Projeto  Java utilizando Swing.
+
+
 Sistema de Gestão para Mercadinhos
 Descrição do Projeto
 Este é um projeto de faculdade desenvolvido para criar um sistema de gestão para mercadinhos, utilizando Java e Swing. O objetivo é oferecer uma solução eficiente para o gerenciamento de pequenas mercearias, permitindo o controle de estoque, vendas, cadastro de produtos e clientes, e a geração de relatórios financeiros.
@@ -14,3 +18,8 @@ Java: Linguagem principal utilizada no desenvolvimento.
 Swing: Biblioteca gráfica utilizada para a construção da interface do usuário.
 Maven: Ferramenta de automação e gerenciamento de dependências.
 Padrão MVC: Arquitetura que organiza o código em Model, View e Controller, promovendo a separação de responsabilidades.
+Estrutura do Projeto
+
+Contribuições:
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e pull requests.
+

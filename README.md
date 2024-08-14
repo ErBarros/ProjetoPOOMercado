@@ -20,6 +20,8 @@ Maven: Ferramenta de automação e gerenciamento de dependências.
 Padrão MVC: Arquitetura que organiza o código em Model, View e Controller, promovendo a separação de responsabilidades.
 Estrutura do Projeto
 
+
+
 ├── src
 │   ├── main
 │   │   ├── java
@@ -29,6 +31,8 @@ Estrutura do Projeto
 │   │   ├── resources         # Arquivos de recursos (como arquivos de configuração)
 │   ├── test                  # Testes unitários do projeto
 ├── pom.xml                   # Arquivo de configuração do Maven
+
+
 
 Contribuições:
 Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e pull requests.

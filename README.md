@@ -3,7 +3,7 @@ Projeto  Java utilizando Swing.
 
 
 Sistema de Gestão para Mercadinhos
-Descrição do Projeto
+
 Este é um projeto de faculdade desenvolvido para criar um sistema de gestão para mercadinhos, utilizando Java e Swing. O objetivo é oferecer uma solução eficiente para o gerenciamento de pequenas mercearias, permitindo o controle de estoque, vendas, cadastro de produtos e clientes, e a geração de relatórios financeiros.
 
 O projeto segue o padrão de arquitetura MVC (Model-View-Controller), que separa claramente as responsabilidades do sistema, facilitando a manutenção e a escalabilidade do código. Além disso, utiliza o Maven como ferramenta de gerenciamento de dependências e construção do projeto.

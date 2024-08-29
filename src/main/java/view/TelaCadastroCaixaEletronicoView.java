@@ -17,14 +17,13 @@ public class TelaCadastroCaixaEletronicoView extends JFrame {
     private JTextField nisPisField;
     private JButton cadastrarButton;
     private JButton cancelarButton;
-
     private CaixaEletronicoController controller;
 
     public TelaCadastroCaixaEletronicoView(CaixaEletronicoController controller) {
         this.controller = controller;
         setTitle("Cadastro de Caixa Eletrônico");
         setSize(300, 250);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
         initialize();
     }

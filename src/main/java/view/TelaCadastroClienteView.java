@@ -17,72 +17,67 @@ public class TelaCadastroClienteView extends JFrame {
         setTitle("Cadastro de Cliente");
         setSize(400, 300);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        setLocationRelativeTo(null);
+        inicializarComponentes();
+    }
+
+    private void inicializarComponentes() {
         setLayout(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
-        gbc.insets = new Insets(10, 10, 10, 10); // Espaçamento
-        gbc.anchor = GridBagConstraints.WEST;
+        gbc.insets = new Insets(10, 10, 10, 10);
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+
+        // Configuração dos componentes na tela
+        int linha = 0;
 
         // Nome
-        gbc.gridx = 0;
-        gbc.gridy = 0;
-        add(new JLabel("Nome:"), gbc);
-
-        gbc.gridx = 1;
-        gbc.gridy = 0;
-        campoNome = new JTextField(20);
-        add(campoNome, gbc);
+        adicionarComponente(new JLabel("Nome:"), 0, linha, gbc);
+        campoNome = adicionarCampoTexto(1, linha++, gbc);
 
         // CPF
-        gbc.gridx = 0;
-        gbc.gridy = 1;
-        add(new JLabel("CPF:"), gbc);
-
-        gbc.gridx = 1;
-        gbc.gridy = 1;
-        campoCpf = new JTextField(20);
-        add(campoCpf, gbc);
+        adicionarComponente(new JLabel("CPF:"), 0, linha, gbc);
+        campoCpf = adicionarCampoTexto(1, linha++, gbc);
 
         // E-mail
-        gbc.gridx = 0;
-        gbc.gridy = 2;
-        add(new JLabel("E-mail:"), gbc);
-
-        gbc.gridx = 1;
-        gbc.gridy = 2;
-        campoEmail = new JTextField(20);
-        add(campoEmail, gbc);
-
-        // Receber promoções
-        gbc.gridx = 1;
-        gbc.gridy = 3;
-        checkboxReceberPromocoes = new JCheckBox("Desejo receber promoções e cupons de desconto");
-        add(checkboxReceberPromocoes, gbc);
+        adicionarComponente(new JLabel("E-mail:"), 0, linha, gbc);
+        campoEmail = adicionarCampoTexto(1, linha++, gbc);
 
         // Endereço
-        gbc.gridx = 0;
-        gbc.gridy = 4;
-        add(new JLabel("Endereço (opcional):"), gbc);
+        adicionarComponente(new JLabel("Endereço (opcional):"), 0, linha, gbc);
+        campoEndereco = adicionarCampoTexto(1, linha++, gbc);
 
-        gbc.gridx = 1;
-        gbc.gridy = 4;
-        campoEndereco = new JTextField(20);
-        add(campoEndereco, gbc);
-
-        // Botões
+        // Checkbox para receber promoções
+        checkboxReceberPromocoes = new JCheckBox("Desejo receber promoções e cupons de desconto");
         gbc.gridx = 0;
-        gbc.gridy = 5;
+        gbc.gridy = linha++;
         gbc.gridwidth = 2;
-        gbc.anchor = GridBagConstraints.CENTER;
+        add(checkboxReceberPromocoes, gbc);
 
-        JPanel panelButtons = new JPanel();
+        // Painel de botões
+        JPanel painelBotoes = new JPanel(new FlowLayout(FlowLayout.CENTER, 10, 10));
         botaoSalvar = new JButton("Salvar");
         botaoCancelar = new JButton("Cancelar");
-        panelButtons.add(botaoSalvar);
-        panelButtons.add(botaoCancelar);
+        painelBotoes.add(botaoSalvar);
+        painelBotoes.add(botaoCancelar);
+        gbc.gridx = 0;
+        gbc.gridy = linha;
+        gbc.gridwidth = 2;
+        add(painelBotoes, gbc);
+    }
 
-        add(panelButtons, gbc);
+    private JTextField adicionarCampoTexto(int gridx, int gridy, GridBagConstraints gbc) {
+        JTextField campoTexto = new JTextField(20);
+        gbc.gridx = gridx;
+        gbc.gridy = gridy;
+        add(campoTexto, gbc);
+        return campoTexto;
+    }
 
-        setLocationRelativeTo(null); // Centraliza na tela
+    private void adicionarComponente(Component componente, int gridx, int gridy, GridBagConstraints gbc) {
+        gbc.gridx = gridx;
+        gbc.gridy = gridy;
+        gbc.gridwidth = 1;
+        add(componente, gbc);
     }
 
     public String getNome() {
@@ -113,4 +108,3 @@ public class TelaCadastroClienteView extends JFrame {
         botaoCancelar.addActionListener(listener);
     }
 }
-

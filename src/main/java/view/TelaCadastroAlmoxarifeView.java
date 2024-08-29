@@ -1,6 +1,6 @@
 package view;
 
-import controller.CaixaEletronicoController;
+import controller.AlmoxarifeController;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -8,7 +8,7 @@ import java.awt.event.ActionListener;
 import java.util.HashMap;
 import java.util.Map;
 
-public class TelaCadastroCaixaEletronico extends JFrame {
+public class TelaCadastroAlmoxarifeView extends JFrame {
 
     private JTextField nomeField;
     private JTextField loginField;
@@ -18,11 +18,11 @@ public class TelaCadastroCaixaEletronico extends JFrame {
     private JButton cadastrarButton;
     private JButton cancelarButton;
 
-    private CaixaEletronicoController controller;
+    private AlmoxarifeController controller;
 
-    public TelaCadastroCaixaEletronico(CaixaEletronicoController controller) {
+    public TelaCadastroAlmoxarifeView(AlmoxarifeController controller) {
         this.controller = controller;
-        setTitle("Cadastro de Caixa Eletrônico");
+        setTitle("Cadastro de Almoxarife");
         setSize(300, 250);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
@@ -65,7 +65,7 @@ public class TelaCadastroCaixaEletronico extends JFrame {
                 dados.put("email", emailField.getText());
                 dados.put("nisPis", nisPisField.getText());
 
-                controller.cadastrarCaixaEletronico(dados);
+                controller.cadastrarAlmoxarife(dados);
             }
         });
 
@@ -80,4 +80,3 @@ public class TelaCadastroCaixaEletronico extends JFrame {
         });
     }
 }
-

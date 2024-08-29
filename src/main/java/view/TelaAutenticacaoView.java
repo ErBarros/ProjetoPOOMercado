@@ -5,10 +5,8 @@ import controller.GerenteController;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.HashMap;
-import java.util.Map;
 
-public class TelaAutenticacao extends JFrame {
+public class TelaAutenticacaoView extends JFrame {
     private JTextField loginField;
     private JPasswordField senhaField;
     private JButton autenticarButton;
@@ -16,7 +14,7 @@ public class TelaAutenticacao extends JFrame {
 
     private GerenteController controller;
 
-    public TelaAutenticacao(GerenteController controller) {
+    public TelaAutenticacaoView(GerenteController controller) {
         this.controller = controller;
         setTitle("Autenticação de Gerente");
         setSize(300, 100);

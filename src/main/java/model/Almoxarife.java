@@ -15,5 +15,28 @@ public class Almoxarife {
         this.nisPis = nisPis;
     }
 
+
+
+    /* Exemplo de um configurador seguro para a senha, organizar para tornar seguro.
+    public void setSenha(String senha) {
+        this.senha = criptografarSenha(senha);
+    }
+
+    private String criptografarSenha(String senha) {
+        // Implementação da criptografia aqui, por exemplo usando BCrypt
+        return BCrypt.hashpw(senha, BCrypt.gensalt());
+    }
+    */
+
+    @Override
+    public String toString() {
+        return "Almoxarife{" +
+                "nome='" + nome + '\'' +
+                ", login='" + login + '\'' +
+                ", email='" + email + '\'' +
+                ", nisPis='" + nisPis + '\'' +
+                '}';
+    }
+
     // Getters and setters omitted for brevity
 }

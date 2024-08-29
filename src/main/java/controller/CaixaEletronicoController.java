@@ -17,4 +17,3 @@ public class CaixaEletronicoController {
         // Lógica para armazenar o caixa eletrônico no sistema
     }
 }
-

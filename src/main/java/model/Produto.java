@@ -11,23 +11,27 @@ public class Produto {
     private double valorCompra; // Valor de compra do produto
     private double valorVenda; // Valor de venda do produto
     private int quantidadeEstoque; // Quantidade em estoque do produto
+    private double valorUnitario; // Valor unitário de venda, se necessário
 
     /**
      * Construtor para inicializar o produto.
-     * @param codigo Codigo do produto
-     * @param nome Nome do produto
-     * @param unidade Unidade de medida
-     * @param valorCompra Valor de compra
-     * @param valorVenda Valor de venda
+     *
+     * @param codigo            Codigo do produto
+     * @param nome              Nome do produto
+     * @param unidade           Unidade de medida
+     * @param valorCompra       Valor de compra
+     * @param valorVenda        Valor de venda
      * @param quantidadeEstoque Quantidade em estoque
+     * @param v
      */
-    public Produto(String codigo, String nome, String unidade, double valorCompra, double valorVenda, int quantidadeEstoque) {
+    public Produto(String codigo, String nome, String unidade, double valorCompra, double valorVenda, int quantidadeEstoque, double v) {
         this.codigo = codigo;
         this.nome = nome;
         this.unidade = unidade;
         this.valorCompra = valorCompra;
         this.valorVenda = valorVenda;
         this.quantidadeEstoque = quantidadeEstoque;
+        this.valorUnitario = valorUnitario;
     }
 
     // Getters e Setters
@@ -80,6 +84,14 @@ public class Produto {
         this.quantidadeEstoque = quantidadeEstoque;
     }
 
+    public double getValorUnitario() {
+        return valorUnitario;
+    }
+
+    public void setValorUnitario(double valorUnitario) {
+        this.valorUnitario = valorUnitario;
+    }
+
     /**
      * Atualiza a quantidade em estoque do produto.
      * @param quantidade Quantidade a ser adicionada ou subtraida do estoque
@@ -105,6 +117,7 @@ public class Produto {
                 ", valorCompra=" + valorCompra +
                 ", valorVenda=" + valorVenda +
                 ", quantidadeEstoque=" + quantidadeEstoque +
+                ", valorUnitario=" + valorUnitario +
                 '}';
     }
 }

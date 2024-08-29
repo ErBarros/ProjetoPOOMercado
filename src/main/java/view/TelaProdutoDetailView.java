@@ -8,7 +8,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class ProdutoDetailView extends JFrame {
+public class TelaProdutoDetailView extends JFrame {
     private JLabel codigoLabel;
     private JTextField nomeField;
     private JTextField unidadeField;
@@ -22,7 +22,7 @@ public class ProdutoDetailView extends JFrame {
     private Produto produto;
     private ProdutoController produtoController;
 
-    public ProdutoDetailView(ProdutoController produtoController) {
+    public TelaProdutoDetailView(ProdutoController produtoController) {
         this.produtoController = produtoController;
 
         setTitle("Detalhes do Produto");

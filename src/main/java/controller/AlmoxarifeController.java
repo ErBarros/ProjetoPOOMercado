@@ -17,4 +17,3 @@ public class AlmoxarifeController {
         // Lógica para armazenar o almoxarife no sistema
     }
 }
-

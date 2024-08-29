@@ -9,7 +9,7 @@ import java.awt.event.ActionListener;
 import java.util.HashMap;
 import java.util.Map;
 
-public class TelaCadastroProduto extends JFrame {
+public class TelaCadastroProdutoView extends JFrame {
 
     private JTextField nomeField;
     private JTextField unidadeField;
@@ -21,7 +21,7 @@ public class TelaCadastroProduto extends JFrame {
 
     private ProdutoController controller;
 
-    public TelaCadastroProduto(ProdutoController controller) {
+    public TelaCadastroProdutoView(ProdutoController controller) {
         this.controller = controller;
         initializeUI();
     }

@@ -2,8 +2,8 @@ package controller;
 
 import model.Produto;
 import model.ProdutoRepository;
-import view.ProdutoDetailView;
-import view.ProdutoView;
+import view.TelaProdutoDetailView;
+import view.TelaProdutoView;
 
 import javax.swing.*;
 import java.util.List;
@@ -11,11 +11,13 @@ import java.util.Map;
 
 public class ProdutoController {
 
-    private ProdutoView produtoView;
+    private TelaProdutoView produtoView;
     private List<Produto> produtos;
     private ProdutoRepository repository;
 
-    public ProdutoController(ProdutoView produtoView, List<Produto> produtos, ProdutoRepository repository) {
+
+
+    public ProdutoController(TelaProdutoView produtoView, List<Produto> produtos, ProdutoRepository repository) {
         this.produtoView = produtoView;
         this.produtos = produtos;
         this.repository = repository;
@@ -32,7 +34,7 @@ public class ProdutoController {
         int selectedRow = produtoView.getSelectedRow();
         if (selectedRow >= 0) {
             Produto selectedProduto = produtos.get(selectedRow);
-            ProdutoDetailView detailView = new ProdutoDetailView(this); // Passa o controlador para a visão
+            TelaProdutoDetailView detailView = new TelaProdutoDetailView(this); // Passa o controlador para a visão
             detailView.setProduto(selectedProduto);
             detailView.setVisible(true);
         } else {
@@ -48,8 +50,8 @@ public class ProdutoController {
                 dados.get("unidade"),
                 Double.parseDouble(dados.get("valorCompra")),
                 Double.parseDouble(dados.get("valorVenda")),
-                Integer.parseInt(dados.get("quantidadeEstoque"))
-        );
+                Integer.parseInt(dados.get("quantidadeEstoque")),
+                25.0);
         repository.adicionarProduto(produto);
         produtos.add(produto);
         produtoView.setProdutos(produtos);

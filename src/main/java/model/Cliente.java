@@ -21,4 +21,3 @@ public class Cliente {
         // Lógica para enviar email com cupom
     }
 }
-

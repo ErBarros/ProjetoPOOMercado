@@ -14,6 +14,7 @@ public class Cupom {
     }
 
     public double aplicarDesconto(double valor) {
+
         return valor - (valor * (percentualDesconto / 100));
     }
 }

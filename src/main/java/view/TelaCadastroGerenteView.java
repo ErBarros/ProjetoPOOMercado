@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 //Define uma nova classe pública chamada TelaCadastroGerente
-public class TelaCadastroGerente extends JFrame {
+public class TelaCadastroGerenteView extends JFrame {
 
     private JTextField nomeField;
     private JTextField loginField;
@@ -23,7 +23,7 @@ public class TelaCadastroGerente extends JFrame {
     private GerenteController controller;
 
     //Construtor recebe um parâmetro controller do tipo GerenteController. Esse parâmetro é usado para passar um objeto controlador para a classe TelaCadastroGerente.
-    public TelaCadastroGerente(GerenteController controller) {
+    public TelaCadastroGerenteView(GerenteController controller) {
         this.controller = controller;
         setTitle("Cadastro de Gerente");
         setSize(300, 250);
